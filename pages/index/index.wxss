@@ -1,82 +1,22 @@
 /**index.wxss**/
-
-.header {
-    display: flex;
-    align-items: center;
-    border: 1rpx solid #e0e0e0;
-    border-radius: 10rpx;
-    box-shadow: 0 0 5rpx #e0e0e0;
-    margin-bottom: 30rpx;
-    padding: 20rpx;
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.header .plus {
-    width: 41rpx;
-    height: 41rpx;
-    margin-right: 20rpx;
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
 }
 
-.header .new-todo {
-    flex: 1;
-    font-size: 28rpx;
+.userinfo-nickname {
+  color: #aaa;
 }
 
-.todos {
-    border: 1rpx solid #e0e0e0;
-    border-radius: 10rpx;
-    box-shadow: 0 0 5rpx #e0e0e0;
-}
-
-.todos .item {
-    display: flex;
-    align-items: center;
-    padding: 25rpx;
-    border-bottom: 1rpx solid #e0e0e0;
-}
-
-.todos .item:last-child {
-    border-bottom: 0;
-}
-
-.todos .item .checkbox {
-    margin-right: 20rpx;
-}
-
-.todos .item .name {
-    flex: 1;
-    font-size: 30rpx;
-    color: #444;
-    margin-right: 20rpx;
-}
-
-.todos .item.finished .name {
-    text-decoration: line-through;
-    color: #888;
-    margin-right: 20rpx;
-}
-
-.footer {
-    display: flex;
-    justify-content: space-between; 
-    margin: 30rpx 0;
-    padding: 0 10rpx;
-    font-size: 26rpx;
-    color: #777;
-}
-.empty {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.empty .title {
-    font-size: 60rpx;
-    margin: 200rpx 50rpx 50rpx;
-    color: #444;
-}
-
-.empty .content {
-    color: #666;
-    text-align: center;
+.usermotto {
+  margin-top: 200px;
+  display: flex;
 }

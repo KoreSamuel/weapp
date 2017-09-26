@@ -1,27 +1,14 @@
 <!--index.wxml-->
 <view class="container">
-    <view class='header'>
-        <image class='plus' src='../../assets/plus.png'></image>
-        <input class='new-todo' value='{{ input }}' placeholder='input here...' auto-focus bindinput='inputChangeHandle' bindconfirm='addTodoHandle'></input>
-    </view>
-    <block wx:if='{{ todos.length}}'>
-        <view class='todos'>
-            <view class='item{{ item.finished ? " finished" : "" }}' wx:for='{{todos}}' wx:key='{{index}}' bindtap='toggleTodoHandle' data-index='{{index}}'>
-            <icon class='checkbox' type='{{ item.finished ? "success" : "circle" }}'></icon>
-            <text class='name'>{{ item.name }}</text>
-            <icon class='remove' type='clear' size='16' catchtap='removeTodoHandle' data-index='{{index}}'></icon>
-            </view>
-        </view>
-        <view class='footer'>
-            <text class='btn' bindtap='toggleAllHandle'>Toggle all</text>
-            <text wx:if='{{ leftCnt }}'>{{leftCnt}} {{leftCnt > 1 ? 'items' : 'item'}} left</text>
-            <text class='btn' wx:if='{{todos.length > leftCnt}}' bindtap='clearFinishedHandle'>clear finished</text>
-        </view>
-    </block>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
-        <view class='empty'>
-            <text class='title'>Congratulations!</text>
-            <text class='content'>There's no more work left.</text>
-        </view>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
+  </view>
+  <view class="usermotto" wx:if="{{hasUserInfo && canIUse }}">
+    <button size='mini' type='primary' bindtap='bindTodoTap'>TODO</button>
+    <button size='mini' type='primary' bindtap='bind2048Tap'>2048</button>
+  </view>
 </view>

@@ -1,12 +1,30 @@
 {
     "pages": [
         "pages/index/index",
-        "pages/logs/logs"
+        "pages/todo/todo",
+        "pages/logs/logs",
+        "pages/2048/2048"
     ],
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#fff",
-        "navigationBarTitleText": "TODO LISTS",
-        "navigationBarTextStyle": "black"
-    }
+        "navigationBarTitleText": "默语泠汐",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": true,
+        "onReachBottomDistance": 50
+    },
+    "tabBar": {
+        "backgroundColor": "#fff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "Home"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "text": "Log"
+            }
+        ]
+    },
+    "debug": true
 }
