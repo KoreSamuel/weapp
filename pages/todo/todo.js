@@ -138,15 +138,15 @@ Page({
         let todos = this.data.todos;
         let remains = [];
 
-        for (let i = 0; i < todos.lengthl; i++) {
-            todos[i].finished || remains.push(todos[i]);
+        for (let i = 0; i < todos.length; i++) {
+            !todos[i].finished && remains.push(todos[i]);
         }
 
         let logs = this.data.logs;
         logs.push({
             timestamp: new Date(),
             action: 'Clear',
-            name: 'Finished todos'
+            name: 'Clear finished todos'
         });
 
         this.setData({
