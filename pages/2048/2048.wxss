@@ -1,0 +1,191 @@
+/* pages/2048/2048.wxss */
+
+.container {
+  box-sizing: border-box;
+  position: absolute;
+  padding: 10px;
+  padding-top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f8f1f9;
+  overflow: hidden;
+}
+
+.container .score-btns {
+  box-sizing: border-box;
+  width: 100%;
+  height: 140px;
+  color: #fff;
+}
+
+.container .score-btns .score {
+  float: left;
+  margin-right: 10px;
+  height: 140px;
+  background: #edc818;
+  border-radius: 4px;
+}
+
+.score-btns .score .label {
+  display: block;
+  width: 100%;
+  height: 52px;
+  line-height: 52px;
+  text-align: center;
+  font-size: 28px;
+}
+
+.score-btns .score .value {
+  display: block;
+  width: 100%;
+  height: 88px;
+  line-height: 88px;
+  text-align: center;
+  font-size: 54px;
+}
+
+.container .score-btns .btns {
+  box-sizing: border-box;
+  float: left;
+  padding: 0 10px;
+  width: 140px;
+  height: 140px;
+  border-radius: 4px;
+  background: #d8d8d8;
+}
+
+.score-btns .btns .icon {
+  display: block;
+  float: left;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+  border-radius: 50%;
+  background: #b5b5b5;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.score-btns .btns .icon.left {
+  margin-right: 10px;
+}
+
+.score-btns .btns .rounds {
+  height: 55px;
+}
+
+.score-btns .btns .btn-reset {
+  margin-top: 10px;
+  width: 100%;
+  height: 55px;
+  line-height: 55px;
+  background: #f57900;
+  color: #fff;
+}
+
+.game-wrap {
+  box-sizing: border-box;
+  position: relative;
+  margin: auto;
+  margin-top: 10px;
+  background: #bbada0;
+  border: 2px solid #b9ad9f;
+  border-radius: 4px;
+}
+
+.game-wrap .game-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.game-container .cell-grid {
+  position: absolute;
+  display: block;
+  background: #b9ad9f;
+  border: 2px solid #b9ad9f;
+  box-sizing: border-box;
+}
+
+.game-container .cell-grid .cell-wrap {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  background: rgba(238, 228, 218, 0.35);
+}
+
+.cell-wrap .cell {
+  position: absolute;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+.cell-wrap .cell >.number {
+  display: block;
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  width: 100%;
+  height: 30px;
+  font-size: 28px;
+  line-height: 30px;
+  text-align: center;
+  color: #000;
+  font-weight: 600;
+}
+
+.cell-2 {
+  background: #eee4da !important;
+}
+
+.cell-4 {
+  background: #ede0c8 !important;
+}
+
+.cell-8 {
+  background: #f2b179 !important;
+}
+
+.cell-16 {
+  background: #f59563 !important;
+}
+
+.cell-32 {
+  background: #f67c5f !important;
+}
+
+.cell-64 {
+  background: #f65e3b !important;
+}
+
+.cell-128 {
+  background: #edcf72 !important;
+}
+
+.cell-256 {
+  background: #edcc61 !important;
+}
+
+.cell-512 {
+  background: #edc850 !important;
+}
+
+.cell-1024 {
+  background: #edc53f !important;
+}
+
+.cell-2048 {
+  background: #edc22e !important;
+}
+
+.cell-4096 {
+  background: #008f00 !important;
+}

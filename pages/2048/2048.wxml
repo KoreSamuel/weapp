@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="score-btns">
+    <view class="score" style="width:200px;">
+      <text class="label">score</text>
+      <text class="value">{{score}}</text>
+    </view>
+    <view class="btns">
+      <button class="btn-reset" >Best:{{score}}</button>
+      <button class="btn-reset" bindtap="Reset">Restart</button>
+    </view>
+  </view>
+  <view class="game-wrap" style="width:{{gameWidth}}px;height:{{gameWidth}}px;">
+    <view class="game-container" catchtouchstart="touchStart" catchtouchend="touchEnd">
+      <view class="cell-grid" wx:for="{{cells}}" wx:key="index" style="width:{{cellSize}}%;height: {{cellSize}}%;left:{{item.col * cellSize}}%;top:{{item.row * cellSize}}%;">
+        <view class="cell-wrap">
+          <view class="cell cell-{{matrix[item.row][item.col]}}">
+            <view class="number">
+              {{matrix[item.row][item.col] || ''}}
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
