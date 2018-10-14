@@ -10,5 +10,6 @@
   <view class="usermotto" wx:if="{{hasUserInfo && canIUse }}">
     <button size='mini' type='primary' bindtap='bindTodoTap'>TODO</button>
     <button size='mini' type='primary' bindtap='bind2048Tap'>2048</button>
+    <button size='mini' type='primary' bindtap='bindKejuTap'>科举</button>
   </view>
 </view>

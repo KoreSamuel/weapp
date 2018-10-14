@@ -25,6 +25,11 @@ Page({
             url: '../2048/2048',
         });
     },
+    bindKejuTap: function () {
+      wx.navigateTo({
+        url: '../keju/keju',
+      });
+    },
     onLoad: function () {
         if (app.globalData.userInfo) {
             this.setData({

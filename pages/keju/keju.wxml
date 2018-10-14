@@ -1,0 +1,20 @@
+<!--pages/keju/keju.wxml-->
+<view class="container">
+  <view class='header'>
+    <input class='new-todo' value='{{ input }}' placeholder='input here...' auto-focus bindinput='inputChangeHandle' bindconfirm='search'></input>
+  </view>
+  <block wx:if='{{ answer.length}}'>
+    <view class='todos'>
+      <view class='item' wx:for="{{ answer }}" wx:key="{{ index }}">
+        <text class='name'>{{item[0]}}</text><br />
+        <text class='action'>{{ item[1] }}</text>
+      </view>
+    </view>
+  </block>
+  <block wx:else>
+    <view class='empty'>
+      <text class='title'>暂无结果!</text>
+      <text class='content'>请换词搜索.</text>
+    </view>
+  </block>
+</view>
